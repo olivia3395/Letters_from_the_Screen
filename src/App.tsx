@@ -558,8 +558,11 @@ export default function App() {
       </AnimatePresence>
 
       {/* Footer */}
-      <footer className="fixed bottom-6 text-[10px] uppercase tracking-[0.4em] text-stone-700 pointer-events-none z-0">
-        {lang === 'en' ? 'Cinematic Emotional Companion • 2026' : '银幕情感伴侣 • 2026'}
+      <footer className="fixed bottom-6 text-[10px] uppercase tracking-[0.4em] text-stone-700 text-center z-0">
+        <div className="space-y-1">
+          <p>{lang === 'en' ? 'Cinematic Emotional Companion • 2026' : '银幕情感伴侣 • 2026'}</p>
+          <p className="opacity-50">© yuyao wang • yuyaow@bu.edu</p>
+        </div>
       </footer>
     </div>
   );
