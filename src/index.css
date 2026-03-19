@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-fancy: "Dancing Script", cursive;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-midnight: #0a0a0c;
+  --color-ink: #1a1a1e;
+  --color-deep-warm: #2a2725; /* Lighter background */
+  --color-parchment: #f5f2ed; /* Lighter parchment */
+  --color-gold: #d4af37;
+  --color-gold-light: #f5e6a3;
+}
+
+@layer base {
+  body {
+    @apply text-gold font-sans antialiased; /* Text is now gold */
+    background-color: var(--color-deep-warm);
+    background-image: 
+      radial-gradient(circle at 50% -20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 0% 100%, rgba(60, 80, 110, 0.02) 0%, transparent 40%),
+      radial-gradient(circle at 100% 100%, rgba(110, 60, 50, 0.02) 0%, transparent 40%);
+    background-attachment: fixed;
+  }
+}
+
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+}
+
+.cinematic-glow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.letter-texture {
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+}
+
+.fade-mask {
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
