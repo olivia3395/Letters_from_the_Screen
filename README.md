@@ -8,6 +8,11 @@
 
 Rather than feeling like a chatbot, the product is designed as a **fateful letter from the screen** — intimate, literary, atmospheric, and emotionally comforting. Users can either be automatically matched with a fitting character, or explore the character gallery and ask for a letter directly.    
 
+![Landing Page](assets/letter1.png)
+
+![Character Gallery](assets/letter2.png)
+
+
 
 ## ✨ Concept
 
@@ -56,13 +61,6 @@ Instead, it offers something softer: **a beautiful reply when life feels heavy**
 
 ## 🖼️ Screenshots
 
-### Landing Page
-
-![Landing Page](assets/letter1.png)
-
-### Character Gallery
-
-![Character Gallery](assets/letter2.png)
 
 ### Character Profile — Jo March
 
