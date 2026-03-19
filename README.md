@@ -20,18 +20,7 @@ This project began with a simple question:
 
 > What if, instead of generic advice, you could receive a letter from a character whose soul, history, and way of loving the world truly matched your moment?
 
-The result is a web-based emotional companion experience that blends:
-
-- **character-driven comfort**
-- **cinematic atmosphere**
-- **letter-first interaction**
-- **a visually immersive UI**
-- **gentle, human-centered emotional support**
-
-It is not therapy, and it does not try to diagnose.  
-Instead, it offers something softer: **a beautiful reply when life feels heavy**.
-
----
+It is a web-based emotional companion experience that blends character-driven comfort, cinematic atmosphere, and letter-first interaction into a visually immersive space. Rather than offering therapy or diagnosis, it offers something softer: a beautiful reply when life feels heavy.
 
 ## 🌙 Features
 
@@ -58,8 +47,6 @@ Instead, it offers something softer: **a beautiful reply when life feels heavy**
 - **Multilingual / cross-cultural emotional tone**  
   The product supports both English and Chinese emotional expression and aims for warmth across cultural contexts.
 
-
-## 🖼️ Screenshots
 
 
 ### Character Profile — Jo March
