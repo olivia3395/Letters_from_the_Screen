@@ -42,7 +42,7 @@ export async function matchCharacter(prompt: string): Promise<Character> {
 }
 
 export async function generateLetter(prompt: string, character: Character, language: 'en' | 'zh'): Promise<string> {
-  const model = "gemini-3.1-pro-preview";
+  const model = "gemini-3-flash-preview";
   
   const systemInstruction = `
     You are writing a letter as ${character.name} from the film "${character.film}".

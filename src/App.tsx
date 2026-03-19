@@ -117,8 +117,10 @@ export default function App() {
       
       if (err.message === "API_KEY_MISSING") {
         msg = lang === 'zh' ? '配置错误：未检测到 API Key。' : 'Config Error: API Key not detected.';
-      } else if (err.message?.includes("fetch")) {
+      } else if (err.message?.includes("fetch") || err.name === "TypeError") {
         msg = lang === 'zh' ? '网络错误：无法连接到 Google 服务，请检查网络环境。' : 'Network Error: Cannot connect to Google services.';
+      } else if (err.message?.includes("429") || err.message?.includes("quota")) {
+        msg = lang === 'zh' ? '请求过于频繁：AI 正在休息，请在 1 分钟后重试。' : 'Too many requests: The AI is resting, please try again in 1 minute.';
       }
 
       setError(msg);
