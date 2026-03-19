@@ -111,9 +111,17 @@ export default function App() {
       const generatedLetter = await generateLetter(prompt, character, lang);
       setLetter(generatedLetter);
       setState('letter');
-    } catch (err) {
-      console.error(err);
-      setError(lang === 'zh' ? '与银幕的连接中断，请重试。' : 'The connection to the screen was lost. Please try again.');
+    } catch (err: any) {
+      console.error("Detailed Error:", err);
+      let msg = lang === 'zh' ? '与银幕的连接中断，请重试。' : 'The connection to the screen was lost. Please try again.';
+      
+      if (err.message === "API_KEY_MISSING") {
+        msg = lang === 'zh' ? '配置错误：未检测到 API Key。' : 'Config Error: API Key not detected.';
+      } else if (err.message?.includes("fetch")) {
+        msg = lang === 'zh' ? '网络错误：无法连接到 Google 服务，请检查网络环境。' : 'Network Error: Cannot connect to Google services.';
+      }
+
+      setError(msg);
       setState('landing');
     }
   };

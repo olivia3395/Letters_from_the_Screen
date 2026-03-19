@@ -1,9 +1,16 @@
 import { GoogleGenAI } from "@google/genai";
 import { CHARACTERS, Character } from "../constants";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+const getApiKey = () => {
+  return process.env.GEMINI_API_KEY || "";
+};
+
+const ai = new GoogleGenAI({ apiKey: getApiKey() });
 
 export async function matchCharacter(prompt: string): Promise<Character> {
+  if (!getApiKey()) {
+    throw new Error("API_KEY_MISSING");
+  }
   const model = "gemini-3-flash-preview";
   
   const systemInstruction = `
